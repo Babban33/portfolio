@@ -36,9 +36,9 @@ export default function Preloader() {
                                 <div key={face} className={`cube-face ${face}`} style={{
                                 position: 'absolute',
                                 inset: 0,
-                                backgroundColor: 'rgba(0, 0, 0, 0.8)',
-                                border: 'solid 1px rgba(255, 255, 255, 0.3)',
-                                boxShadow: 'inset 0 0 0 1px rgba(255, 255, 255, 0.3)',
+                                backgroundColor: 'hsl(var(--primary) / 0.8)',
+                                border: 'solid 1px hsl(var(--background))',
+                                boxShadow: 'inset 0 0 0 1px hsl(var(--background))',
                                 ...(face === 'shadow' && {
                                     transform: 'translateZ(-80px)',
                                     animation: 'bouncing-shadow 2s infinite',
