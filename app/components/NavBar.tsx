@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { MoonIcon, SunIcon, MenuIcon } from 'lucide-react'
 import { useTheme } from "next-themes"
 
@@ -26,7 +26,7 @@ export default function Navbar() {
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-              <span className="font-bold text-xl">Chaitanya Wankhede</span>
+              <span className="font-bold text-xl">Chaitanya</span>
             </Link>
           </div>
           <div className="hidden md:flex items-center justify-center space-x-4">
@@ -64,7 +64,6 @@ export default function Navbar() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right">
-                <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
                 <nav className="flex flex-col space-y-4 mt-4">
                   {navItems.map((item) => (
                     <Link
