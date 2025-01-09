@@ -19,39 +19,42 @@ export default function HomeSection() {
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between lg:space-x-8">
                     <div className="relative z-10 max-w-2xl lg:max-w-none lg:flex-1">
                         <motion.h1 
-                        className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl md:text-5xl lg:text-6xl"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.2 }}
+                            className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl md:text-5xl lg:text-6xl"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.2 }}
                         >
-                        Hi, I&apos;m Chaitanya
+                            Hi, I&apos;m Chaitanya
                         </motion.h1>
                         <motion.p 
-                        className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl leading-7 sm:leading-8 text-gray-600 dark:text-gray-300"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.4 }}
+                            className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl leading-7 sm:leading-8 text-gray-600 dark:text-gray-300"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.4 }}
                         >
-                        Full Stack Developer | AI Enthusiast | Problem Solver
+                            Full Stack Developer | AI Enthusiast | Problem Solver
                         </motion.p>
                         <motion.div 
-                        className="mt-6 sm:mt-8 md:mt-10 flex flex-row items-center gap-4 sm:gap-x-6"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.6 }}
-                        >
-                        <Button asChild size="lg" className="w-full sm:w-auto rounded-full animate-pulse">
-                            <Link href="#contact">
-                            Contact Me <ArrowRight className="ml-2 h-4 w-4" />
-                            </Link>
-                        </Button>
-                        <Button variant="outline" size="lg" asChild className="w-full sm:w-auto rounded-full">
-                            <Link href="#about">Learn More</Link>
-                        </Button>
+                            className="mt-6 sm:mt-8 md:mt-10 flex flex-row items-center gap-4 sm:gap-x-6"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.6 }}
+                            >
+                            <Button asChild size="lg" className="w-full sm:w-auto rounded-full animate-pulse">
+                                <Link href="#contact">
+                                Contact Me <ArrowRight className="ml-2 h-4 w-4" />
+                                </Link>
+                            </Button>
+                            <Button variant="outline" size="lg" asChild className="w-full sm:w-auto rounded-full">
+                                <Link href="#about">Learn More</Link>
+                            </Button>
                         </motion.div>
                     </div>
-                    <div 
+                    <motion.div 
                         className="relative mt-8 lg:mt-0 lg:flex-1 flex justify-center lg:justify-start"
+                        initial={{ opacity: 0, x: 100 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
                     >
                         <div className="relative mx-auto w-full max-w-lg lg:max-w-none aspect-square">
                         <Image
@@ -61,7 +64,7 @@ export default function HomeSection() {
                             className="rounded-2xl bg-gray-50 object-cover dark:bg-gray-800"
                         />
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </motion.section>
