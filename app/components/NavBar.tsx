@@ -4,7 +4,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from "@/components/ui/sheet"
-import { MoonIcon, SunIcon, MenuIcon } from 'lucide-react'
+import { MoonIcon, SunIcon, MenuIcon, Download } from 'lucide-react'
 import { useTheme } from "next-themes"
 
 const navItems = [
@@ -84,7 +84,7 @@ export default function Navbar() {
                 <div className="mt-auto pt-4">
                   <Button asChild className="w-full" variant="outline">
                     <Link href="/path-to-your-resume.pdf" download>
-                      Download Resume
+                      Resume <Download className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
                 </div>
