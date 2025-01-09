@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Download } from 'lucide-react'
 import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"
@@ -42,11 +42,13 @@ export default function HomeSection() {
                             >
                             <Button asChild size="lg" className="w-full sm:w-auto rounded-full animate-pulse">
                                 <Link href="#contact">
-                                Contact Me <ArrowRight className="ml-2 h-4 w-4" />
+                                    Contact Me <ArrowRight className="ml-2 h-4 w-4" />
                                 </Link>
                             </Button>
                             <Button variant="outline" size="lg" asChild className="w-full sm:w-auto rounded-full">
-                                <Link href="#about">Learn More</Link>
+                                <Link href="#about">
+                                    Resume<Download className="ml-2 h-4 w-4" />
+                                </Link>
                             </Button>
                         </motion.div>
                     </div>
