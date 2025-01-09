@@ -81,6 +81,13 @@ export default function Navbar() {
                     </Link>
                   ))}
                 </nav>
+                <div className="mt-auto pt-4">
+                  <Button asChild className="w-full" variant="outline">
+                    <Link href="/path-to-your-resume.pdf" download>
+                      Download Resume
+                    </Link>
+                  </Button>
+                </div>
               </SheetContent>
             </Sheet>
           </div>
