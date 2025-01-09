@@ -1,7 +1,11 @@
-import HeroSection from "./components/HeroSection";
+"use client"
 
+import HeroSection from "./components/HeroSection";
+import { AnimatePresence } from "framer-motion";
 export default function Home(){
     return(
-      <HeroSection />
+        <AnimatePresence mode="wait">
+            <HeroSection />
+        </AnimatePresence>
     )
 }
