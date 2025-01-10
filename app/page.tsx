@@ -9,7 +9,7 @@ export default function Home(){
         <AnimatePresence mode="wait">
             <HeroSection key="home" />
             <AboutMe key="about" />
-            <Experience/>
+            <Experience key="experience"/>
         </AnimatePresence>
     )
 }
