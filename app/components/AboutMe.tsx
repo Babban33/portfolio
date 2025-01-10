@@ -2,9 +2,16 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Award, BookOpen, Code } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import {motion} from "framer-motion";
+
 export default function AboutMe() {
     return(
-        <section className="bg-muted/50 py-20 sm:py-32">
+        <motion.section 
+            className="bg-muted/50 py-20 sm:py-32"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+        >
             <div className="container max-w-screen-xl mx-auto">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center"> About Me</h2>
                 <div className="grid md:grid-cols-2 gap-8 px-4">
@@ -69,6 +76,6 @@ export default function AboutMe() {
                     </div>
                 </div>
             </div>
-        </section>
+        </motion.section>
     )
 }
