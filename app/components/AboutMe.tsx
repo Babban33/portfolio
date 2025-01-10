@@ -1,8 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Award, BookOpen, Code } from "lucide-react";
+import { BookOpen, Code, Github, Linkedin, Mail, MessageSquare, Phone } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import {motion} from "framer-motion";
+import WhatsAppIcon from "@/components/icons/whatsapp-icon";
 
 export default function AboutMe() {
     return(
@@ -81,15 +82,27 @@ export default function AboutMe() {
                             <Card>
                                 <CardHeader>
                                     <CardTitle className="flex items-center">
-                                        <Award className="mr-2" /> Achievements
+                                        <MessageSquare className="mr-2" /> Social Links
                                     </CardTitle>
                                 </CardHeader>
                                 <CardContent>
-                                    <ul className="list-disc list-inside">
-                                        <li>Achievement 1</li>
-                                        <li>Achievement 2</li>
-                                        <li>Achievement 3</li>
-                                    </ul>
+                                <div className="flex justify-around">
+                                    <Link href="" target="_blank" rel="noopener noreferrer">
+                                        <WhatsAppIcon className="w-8 h-8 text-foreground hover:text-primary transition-colors" />
+                                    </Link>
+                                    <Link href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+                                        <Linkedin className="w-8 h-8 text-foreground hover:text-primary transition-colors" />
+                                    </Link>
+                                    <Link href="mailto:your.email@example.com">
+                                        <Mail className="w-8 h-8 text-foreground hover:text-primary transition-colors" />
+                                    </Link>
+                                    <Link href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
+                                        <Phone className="w-8 h-8 text-foreground hover:text-primary transition-colors" />
+                                    </Link>
+                                    <Link href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+                                        <Github className="w-8 h-8 text-foreground hover:text-primary transition-colors" />
+                                    </Link>
+                                </div>
                                 </CardContent>
                             </Card>
                         </motion.div>
