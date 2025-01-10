@@ -45,7 +45,11 @@ export default function AboutMe() {
                         </Card>
                     </motion.div>
                     <div className="grid gap-8">
-                        <div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 50 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.4 }}
+                        >
                             <Card>
                                 <CardHeader>
                                     <CardTitle className="flex items-center">
@@ -68,7 +72,7 @@ export default function AboutMe() {
                                 </ul>
                                 </CardContent>
                             </Card>
-                        </div>
+                        </motion.div>
                         <div>
                         <Card>
                             <CardHeader>
