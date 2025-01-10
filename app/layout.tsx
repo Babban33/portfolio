@@ -2,6 +2,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css"
 import Navbar from "./components/NavBar"
 import Preloader from "@/components/preloader"
+import Footer from "@/components/Footer"
 
 export const metadata = {
   title: "Chaitanya Wankhede - Personal Portfolio",
@@ -29,6 +30,7 @@ export default function RootLayout({
                 {children}
               </div>
             </main>
+            <Footer/>
           </div>
           <Preloader />
         </ThemeProvider>
