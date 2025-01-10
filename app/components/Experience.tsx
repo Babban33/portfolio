@@ -63,7 +63,13 @@ export default function Experience(){
                 </motion.h2>
                 <div className="space-y-8 px-4">
                     {experiences.map((exp, index) => (
-                        <div key={`experience-${index}`}>
+                        <motion.div 
+                            key={`experience-${index}`}
+                            initial={{ opacity: 0, y: 50 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -50 }}
+                            transition={{ duration: 0.5, delay: index * 0.2 }}
+                        >
                             <Card className="overflow-hidden">
                                 <CardHeader className="bg-muted">
                                     <CardTitle className="flex items-center text-2xl">
@@ -94,7 +100,7 @@ export default function Experience(){
                                     </div>
                                 </CardContent>
                             </Card>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>
