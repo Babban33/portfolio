@@ -1,7 +1,7 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Briefcase, Calendar, Trophy } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-
+import {motion} from 'framer-motion';
 const experiences = [
     {
       title: "Junior Research Fellow",
@@ -43,7 +43,14 @@ const experiences = [
 
 export default function Experience(){
     return(
-        <section className="py-16 bg-muted/30">
+        <motion.section 
+            className="py-16 bg-muted/30"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0, y: -50 }}
+            transition={{ duration: 0.5 }}
+            id="experience"
+        >
             <div className="container max-w-screen-xl mx-auto">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8 text-center">Experience</h2>
                 <div className="space-y-8 px-4">
@@ -83,6 +90,6 @@ export default function Experience(){
                     ))}
                 </div>
             </div>
-        </section>
+        </motion.section>
     )
 }
