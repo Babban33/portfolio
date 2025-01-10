@@ -12,7 +12,7 @@ export default function HomeSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="relative overflow-hidden py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28"
+            className="relative max-w-screen-xl justify-center items-center mx-auto overflow-hidden py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28"
         >
             <div className="absolute inset-0 bg-grid-small-white/[0.2] bg-grid-small-white/[0.2]" />
             <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left">
