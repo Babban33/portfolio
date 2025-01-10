@@ -52,7 +52,15 @@ export default function Experience(){
             id="experience"
         >
             <div className="container max-w-screen-xl mx-auto">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8 text-center">Experience</h2>
+                <motion.h2 
+                    className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8 text-center"
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                >
+                    Experience
+                </motion.h2>
                 <div className="space-y-8 px-4">
                     {experiences.map((exp, index) => (
                         <div key={`experience-${index}`}>
