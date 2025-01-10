@@ -2,6 +2,45 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/com
 import { Briefcase, Calendar, Trophy } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
+const experiences = [
+    {
+      title: "Junior Research Fellow",
+      company: "BETiC GHRCE",
+      period: "Dec 2023 - Jun 2024",
+      description: "Worked on both Hardware and Software as well as Researched on the project.",
+      achievements: [
+        "Documented Code resulting in better understanding of everything by 50%",
+        "Trained 5 AI models achieveing an average accuracy of 90%",
+        "Delpoyed models as RestfulAPIs. Crafted a responsive frontend increasing user engagement by 80%"
+      ],
+      technologies: ['React', 'Node.js', 'FastAPI', 'Pytorch', 'Tensorflow', 'Docker', 'Azure']
+    },
+    {
+      title: "Software Developer Intern",
+      company: "Alhansat Solutions",
+      period: "Sept 2023 - Oct 2023",
+      description: "Crafted a Resume Builder feature for the company's website.",
+      achievements: [
+        "Led a team of 12 developers as well as taught version control and svelte",
+        "Made open-spurce contibutions and managed the repository reducing conflicts by 70%",
+        "Got Selected as top contributor from a pool of 200 developers"
+      ],
+      technologies: ['Svelte', 'Javascript', 'Tailwindcss', 'Git', 'Github', 'Figma']
+    },
+    {
+      title: "Sfotware Developer Intern",
+      company: "Ineuron AI",
+      period: "Mar 2023 - Jun 2023",
+      description: "Trained and deployed a classification ML model using Python and Docker.",
+      achievements: [
+        "Trained an XGBoost model with 95% accuracy on the test dataset",
+        "Deployed the model as an endpoint using Flask and Jinja2Template",
+        "Developed a simple frontend using HTML, CSS and Javascript to interact with model"
+      ],
+      technologies: ['Python', 'Docker', 'Scikit-learn', 'Flask', 'Jinja2', 'HTML', 'CSS', 'Javascript']
+    },
+]
+
 export default function Experience(){
     return(
         <section className="py-16 bg-muted/30">
