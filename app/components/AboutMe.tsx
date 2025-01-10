@@ -73,22 +73,26 @@ export default function AboutMe() {
                                 </CardContent>
                             </Card>
                         </motion.div>
-                        <div>
-                        <Card>
-                            <CardHeader>
-                                <CardTitle className="flex items-center">
-                                    <Award className="mr-2" /> Achievements
-                                </CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <ul className="list-disc list-inside">
-                                    <li>Achievement 1</li>
-                                    <li>Achievement 2</li>
-                                    <li>Achievement 3</li>
-                                </ul>
-                            </CardContent>
-                        </Card>
-                        </div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 50 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.5 }}
+                        >
+                            <Card>
+                                <CardHeader>
+                                    <CardTitle className="flex items-center">
+                                        <Award className="mr-2" /> Achievements
+                                    </CardTitle>
+                                </CardHeader>
+                                <CardContent>
+                                    <ul className="list-disc list-inside">
+                                        <li>Achievement 1</li>
+                                        <li>Achievement 2</li>
+                                        <li>Achievement 3</li>
+                                    </ul>
+                                </CardContent>
+                            </Card>
+                        </motion.div>
                     </div>
                 </div>
             </div>
