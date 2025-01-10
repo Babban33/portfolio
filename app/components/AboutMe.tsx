@@ -11,9 +11,17 @@ export default function AboutMe() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
+            id="about"
         >
             <div className="container max-w-screen-xl mx-auto">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center"> About Me</h2>
+                <motion.h2 
+                    className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center"
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                > 
+                    About Me
+                </motion.h2>
                 <div className="grid md:grid-cols-2 gap-8 px-4">
                     <div>
                         <Card className="h-full">
