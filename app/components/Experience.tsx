@@ -28,7 +28,7 @@ const experiences = [
       technologies: ['Svelte', 'Javascript', 'Tailwindcss', 'Git', 'Github', 'Figma']
     },
     {
-      title: "Sfotware Developer Intern",
+      title: "Software Developer Intern",
       company: "Ineuron AI",
       period: "Mar 2023 - Jun 2023",
       description: "Trained and deployed a classification ML model using Python and Docker.",
@@ -47,43 +47,40 @@ export default function Experience(){
             <div className="container max-w-screen-xl mx-auto">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8 text-center">Experience</h2>
                 <div className="space-y-8 px-4">
-                    <div>
-                        <Card className="overflow-hidden">
-                            <CardHeader className="bg-muted">
-                                <CardTitle className="flex items-center text-2xl">
-                                <Briefcase className="mr-2" />
-                                Junior Research Fellow
-                                </CardTitle>
-                                <CardDescription>BETiC GHRCE</CardDescription>
-                            </CardHeader>
-                            <CardContent className="pt-6">
-                                <div className="flex items-center text-muted-foreground mb-4">
+                    {experiences.map((exp, index) => (
+                        <div key={`experience-${index}`}>
+                            <Card className="overflow-hidden">
+                                <CardHeader className="bg-muted">
+                                    <CardTitle className="flex items-center text-2xl">
+                                    <Briefcase className="mr-2" />
+                                    {exp.title}
+                                    </CardTitle>
+                                    <CardDescription>{exp.company}</CardDescription>
+                                </CardHeader>
+                                <CardContent className="pt-6">
+                                    <div className="flex items-center text-muted-foreground mb-4">
                                     <Calendar className="mr-2" />
-                                    Dec 2023 - Jun 2024
-                                </div>
-                                <p className="mb-4">Did something</p>
-                                <h4 className="font-semibold mb-2 flex items-center">
+                                    {exp.period}
+                                    </div>
+                                    <p className="mb-4">{exp.description}</p>
+                                    <h4 className="font-semibold mb-2 flex items-center">
                                     <Trophy className="mr-2" />
                                     Key Achievements:
-                                </h4>
-                                <ul className="list-disc pl-5 space-y-1 mb-4">
-                                    <li>
-                                        Achievement 1
-                                    </li>
-                                    <li>
-                                        Achievement 2
-                                    </li>
-                                    <li>
-                                        Achievement 3
-                                    </li>
-                                </ul>
-                                <div className="flex flex-wrap gap-2">
-                                    <Badge variant="secondary"> React</Badge>
-                                    <Badge variant="secondary"> FastAPI</Badge>
-                                </div>
-                            </CardContent>
-                        </Card>
-                    </div>
+                                    </h4>
+                                    <ul className="list-disc pl-5 space-y-1 mb-4">
+                                    {exp.achievements.map((achievement, achIndex) => (
+                                        <li key={`achievement-${index}-${achIndex}`}>{achievement}</li>
+                                    ))}
+                                    </ul>
+                                    <div className="flex flex-wrap gap-2">
+                                    {exp.technologies.map((tech, techIndex) => (
+                                        <Badge key={`tech-${index}-${techIndex}`} variant="secondary">{tech}</Badge>
+                                    ))}
+                                    </div>
+                                </CardContent>
+                            </Card>
+                        </div>
+                    ))}
                 </div>
             </div>
         </section>
