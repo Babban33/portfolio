@@ -23,7 +23,11 @@ export default function AboutMe() {
                     About Me
                 </motion.h2>
                 <div className="grid md:grid-cols-2 gap-8 px-4">
-                    <div>
+                    <motion.div
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.3 }}
+                    >
                         <Card className="h-full">
                             <CardHeader>
                                 <CardTitle className="flex items-center text-2xl">
@@ -39,7 +43,7 @@ export default function AboutMe() {
                                 </p>
                             </CardContent>
                         </Card>
-                    </div>
+                    </motion.div>
                     <div className="grid gap-8">
                         <div>
                             <Card>
