@@ -1,4 +1,24 @@
 import {motion} from 'framer-motion';
+
+const projects = [
+    {
+      title: "Dental Docs",
+      description: "Code documentation for the BIRAC Dental Project.",
+      image: "/globe.svg?height=200&width=300",
+      techStack: ["Docusaurus", "Nextjs", "React", "Tailwind CSS"],
+      githubLink: "https://github.com/babban33/dental-docs",
+      liveLink: "https://ai-task-manager.example.com",
+    },
+    {
+      title: "Notewave",
+      description: "A simple notes app with enhanced privacy and security.",
+      image: "/globe.svg?height=200&width=300",
+      techStack: ["Nextjs", "Typescript", "React", "Supabase"],
+      githubLink: "https://github.com/babban33/note-wave",
+      liveLink: "https://blockchain-voting.example.com",
+    },
+]
+
 export default function Project(){
     return (
         <motion.section 
