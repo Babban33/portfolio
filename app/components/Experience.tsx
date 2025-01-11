@@ -111,8 +111,18 @@ export default function Experience() {
                                         <h6 className="font-semibold mb-2">Skills Used:</h6>
                                         <div className="flex flex-wrap gap-2">
                                         {experiences[selectedExp].skills.map((skill) =>(
-                                            <Badge key={skill} variant="secondary">
+                                            <Badge key={skill} variant="secondary" className="rounded-full">
                                                 {skill}
+                                            </Badge>
+                                        ))}
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h6 className="font-semibold mb-2">Technologies Used:</h6>
+                                        <div className="flex flex-wrap gap-2">
+                                        {experiences[selectedExp].technologies.map((tech) =>(
+                                            <Badge key={tech} className="rounded-full">
+                                                {tech}
                                             </Badge>
                                         ))}
                                         </div>
