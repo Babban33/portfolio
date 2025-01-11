@@ -86,8 +86,8 @@ export default function Experience() {
             </div>
 
             {selectedExp !== null && (
-                <div className="fixed inset-0 bg-background/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-                    <div className="bg-card text-card-foreground rounded-lg shadow-lg max-w-4xl w-full">
+                <div className="fixed inset-0 bg-background/80 backdrop-blur-sm z-50 flex items-center max-h-screen justify-center p-4">
+                    <div className="bg-card text-card-foreground rounded-lg shadow-lg max-w-4xl max-h-screen w-full">
                         <div className="p-6">
                             <div className="flex justify-between items-start mb-4">
                                 <div>
@@ -98,7 +98,7 @@ export default function Experience() {
                                     <X size={24} />
                                 </Button>
                             </div>
-                            <ScrollArea className="h-[70vh">
+                            <ScrollArea className="max-h-[70vh] overflow-auto">
                                 <p className="mb-6">{experiences[selectedExp].description}</p>
                                 <h4 className="font-semibold mb-2 text-lg">Details:</h4>
                                 <ul className="list-disc pl-5 space-y-2">
@@ -106,6 +106,7 @@ export default function Experience() {
                                         <li key={index}>{project}</li>
                                     ))}
                                 </ul>
+                                {/* you were the moon. you shined bright in the darkness. was he the sun? no, he was the darkness. */}
                                 <div className="grid grid-cols-2 gap-4 my-4">
                                     <div>
                                         <h6 className="font-semibold mb-2">Skills Used:</h6>
