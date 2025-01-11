@@ -19,6 +19,7 @@ const experiences = [
         "Trained 5 AI models achieveing an average accuracy of 90%",
         "Delpoyed models as RestfulAPIs. Crafted a responsive frontend increasing user engagement by 80%"
         ],
+        technologies: ['Python', 'Tensorflow', 'FastAPI', 'React', 'Pytorch', 'Docker']
     },
     {
         company: "Alhansat Solutions",
@@ -30,7 +31,8 @@ const experiences = [
         "Led a team of 12 developers as well as taught version control and svelte",
         "Made open-spurce contibutions and managed the repository reducing conflicts by 70%",
         "Got Selected as top contributor from a pool of 200 developers"
-        ]
+        ],
+        technologies: ['Python', 'Tensorflow', 'FastAPI', 'React', 'Pytorch', 'Docker']
     },
     {
         company: "Ineuron AI",
@@ -42,7 +44,8 @@ const experiences = [
         "Trained an XGBoost model with 95% accuracy on the test dataset",
         "Deployed the model as an endpoint using Flask and Jinja2Template",
         "Developed a simple frontend using HTML, CSS and Javascript to interact with model"
-        ]
+        ],
+        technologies: ['Python', 'Tensorflow', 'FastAPI', 'React', 'Pytorch', 'Docker']
     },
 ]
 
