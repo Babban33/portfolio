@@ -3,6 +3,7 @@
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { ScrollArea } from "@radix-ui/react-scroll-area"
 import { ChevronRight, X } from "lucide-react"
 import { useState } from "react"
 
@@ -94,6 +95,27 @@ export default function Experience() {
                                     <X size={24} />
                                 </Button>
                             </div>
+                            <ScrollArea className="h-[70vh">
+                                <p className="mb-6">{experiences[selectedExp].description}</p>
+                                <h4 className="font-semibold mb-2 text-lg">Details:</h4>
+                                <ul className="list-disc pl-5 space-y-2">
+                                    {experiences[selectedExp].projects.map((project, index) => (
+                                        <li key={index}>{project}</li>
+                                    ))}
+                                </ul>
+                                <div className="grid grid-cols-2 gap-4 my-4">
+                                    <div>
+                                        <h6 className="font-semibold mb-2">Skills Used:</h6>
+                                        <div className="flex flex-wrap gap-2">
+                                        {experiences[selectedExp].skills.map((skill) =>(
+                                            <Badge key={skill} variant="secondary">
+                                                {skill}
+                                            </Badge>
+                                        ))}
+                                        </div>
+                                    </div>
+                                </div>
+                            </ScrollArea>
                         </div>
                     </div>
                 </div>
