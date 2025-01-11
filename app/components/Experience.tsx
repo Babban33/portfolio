@@ -32,7 +32,7 @@ const experiences = [
         "Made open-spurce contibutions and managed the repository reducing conflicts by 70%",
         "Got Selected as top contributor from a pool of 200 developers"
         ],
-        technologies: ['Python', 'Tensorflow', 'FastAPI', 'React', 'Pytorch', 'Docker']
+        technologies: ['Svelte', 'Javascript', 'Tailwind CSS', 'Figma', 'Git', 'Github'], 
     },
     {
         company: "Ineuron AI",
@@ -45,7 +45,7 @@ const experiences = [
         "Deployed the model as an endpoint using Flask and Jinja2Template",
         "Developed a simple frontend using HTML, CSS and Javascript to interact with model"
         ],
-        technologies: ['Python', 'Tensorflow', 'FastAPI', 'React', 'Pytorch', 'Docker']
+        technologies: ['Python', 'Scikit-learn', 'FastAPI', 'HTML', 'CSS', 'Docker', 'Azure']
     },
 ]
 
