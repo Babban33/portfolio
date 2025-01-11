@@ -1,109 +1,103 @@
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
-import { Briefcase, Calendar, Trophy } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
-import {motion} from 'framer-motion';
+"use client"
+
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
+import { ChevronRight, X } from "lucide-react"
+import { useState } from "react"
+
 const experiences = [
     {
-      title: "Junior Research Fellow",
-      company: "BETiC GHRCE",
-      period: "Dec 2023 - Jun 2024",
-      description: "Worked on both Hardware and Software as well as Researched on the project.",
-      achievements: [
+        company: "BETiC GHRCE",
+        title: "Junior Research Fellow",
+        period: "Dec 2023 - Jun 2024",
+        description: "Worked on both Hardware and Software as well as Researched on the project.",
+        skills: ['Frontend', 'Design', 'Performance'],
+        projects: [
         "Documented Code resulting in better understanding of everything by 50%",
         "Trained 5 AI models achieveing an average accuracy of 90%",
         "Delpoyed models as RestfulAPIs. Crafted a responsive frontend increasing user engagement by 80%"
-      ],
-      technologies: ['React', 'Node.js', 'FastAPI', 'Pytorch', 'Tensorflow', 'Docker', 'Azure']
+        ],
     },
     {
-      title: "Software Developer Intern",
-      company: "Alhansat Solutions",
-      period: "Sept 2023 - Oct 2023",
-      description: "Crafted a Resume Builder feature for the company's website.",
-      achievements: [
+        company: "Alhansat Solutions",
+        title: "Software Developer Intern",
+        period: "Sept 2023 - Oct 2023",
+        description: "Crafted a Resume Builder feature for the company's website.",
+        skills: ['Frontend', 'Design', 'Performance'],
+        projects: [
         "Led a team of 12 developers as well as taught version control and svelte",
         "Made open-spurce contibutions and managed the repository reducing conflicts by 70%",
         "Got Selected as top contributor from a pool of 200 developers"
-      ],
-      technologies: ['Svelte', 'Javascript', 'Tailwindcss', 'Git', 'Github', 'Figma']
+        ]
     },
     {
-      title: "Software Developer Intern",
-      company: "Ineuron AI",
-      period: "Mar 2023 - Jun 2023",
-      description: "Trained and deployed a classification ML model using Python and Docker.",
-      achievements: [
+        company: "Ineuron AI",
+        title: "Software Developer Intern",
+        period: "Mar 2023 - Jun 2023",
+        description: "Trained and deployed a classification ML model using Python and Docker.",
+        skills: ['Frontend', 'Design', 'Performance'],
+        projects: [
         "Trained an XGBoost model with 95% accuracy on the test dataset",
         "Deployed the model as an endpoint using Flask and Jinja2Template",
         "Developed a simple frontend using HTML, CSS and Javascript to interact with model"
-      ],
-      technologies: ['Python', 'Docker', 'Scikit-learn', 'Flask', 'Jinja2', 'HTML', 'CSS', 'Javascript']
+        ]
     },
 ]
 
-export default function Experience(){
-    return(
-        <motion.section 
-            className="py-16 bg-muted/30"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0, y: -50 }}
-            transition={{ duration: 0.5 }}
-            id="experience"
-        >
+export default function Experience() {
+    const [selectedExp, setSelectedExp] = useState<number | null>(null)
+    return (
+        <section className="py-16 bg-muted/30" id="optional">
             <div className="container max-w-screen-xl mx-auto">
-                <motion.h2 
-                    className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8 text-center"
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    transition={{ duration: 0.5, delay: 0.2 }}
-                >
-                    Experience
-                </motion.h2>
-                <div className="space-y-8 px-4">
-                    {experiences.map((exp, index) => (
-                        <motion.div 
-                            key={`experience-${index}`}
-                            initial={{ opacity: 0, y: 50 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -50 }}
-                            transition={{ duration: 0.5, delay: index * 0.2 }}
-                        >
-                            <Card className="overflow-hidden">
-                                <CardHeader className="bg-muted">
-                                    <CardTitle className="flex items-center text-2xl">
-                                    <Briefcase className="mr-2" />
-                                    {exp.title}
-                                    </CardTitle>
-                                    <CardDescription>{exp.company}</CardDescription>
-                                </CardHeader>
-                                <CardContent className="pt-6">
-                                    <div className="flex items-center text-muted-foreground mb-4">
-                                    <Calendar className="mr-2" />
-                                    {exp.period}
-                                    </div>
-                                    <p className="mb-4">{exp.description}</p>
-                                    <h4 className="font-semibold mb-2 flex items-center">
-                                    <Trophy className="mr-2" />
-                                    Key Achievements:
-                                    </h4>
-                                    <ul className="list-disc pl-5 space-y-1 mb-4">
-                                    {exp.achievements.map((achievement, achIndex) => (
-                                        <li key={`achievement-${index}-${achIndex}`}>{achievement}</li>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8 text-center">Experience</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {experiences.map((experience, index) => (
+                        <Card key={index} className="overflow-hidden">
+                            <CardContent className="p-6">
+                                <h3 className="text-xl font-semibold mb-2">{experience.title}</h3>
+                                <p className="text-sm text-muted-foreground mb-4">{experience.company} | {experience.period}</p>
+                                <div className="flex flex-wrap gap-2 mb-4">
+                                    {experience.skills.map((skill) => (
+                                        <Badge key={skill} variant="secondary">
+                                            {skill}
+                                        </Badge>
                                     ))}
-                                    </ul>
-                                    <div className="flex flex-wrap gap-2">
-                                    {exp.technologies.map((tech, techIndex) => (
-                                        <Badge key={`tech-${index}-${techIndex}`} variant="secondary">{tech}</Badge>
-                                    ))}
-                                    </div>
-                                </CardContent>
-                            </Card>
-                        </motion.div>
+                                </div>
+                                <Button
+                                    variant="ghost"
+                                    className="w-full justify-between"
+                                    onClick={() => setSelectedExp(index)}
+                                >
+                                    <span>View Details</span>
+                                    <ChevronRight
+                                        size={20}
+                                        className="transform transition-transform"
+                                    />
+                                </Button>
+                            </CardContent>
+                        </Card>
                     ))}
                 </div>
             </div>
-        </motion.section>
+
+            {selectedExp !== null && (
+                <div className="fixed inset-0 bg-background/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+                    <div className="bg-card text-card-foreground rounded-lg shadow-lg max-w-4xl w-full">
+                        <div className="p-6">
+                            <div className="flex justify-between items-start mb-4">
+                                <div>
+                                    <h3 className="text-2xl font-semibold">{experiences[selectedExp].title}</h3>
+                                    <p className="text-sm text-muted-foreground">{experiences[selectedExp].company} | {experiences[selectedExp].period}</p>
+                                </div>
+                                <Button variant="ghost" size="icon" onClick={() => setSelectedExp(null)}>
+                                    <X size={24} />
+                                </Button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
+        </section>
     )
 }
