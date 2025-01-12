@@ -1,15 +1,81 @@
 "use client"
 import { Button } from "@/components/ui/button";
 import {motion} from "framer-motion";
-import { Code, Server, Database, Cloud, Brain, GitBranch } from 'lucide-react'
+import { Code, Server, Database, Cloud, Brain } from 'lucide-react'
 import { useState } from "react";
+import { siReact, siNextdotjs, siTailwindcss, siFigma, siJavascript, siTypescript, siHtml5, siCss3 } from 'simple-icons';
 
 const skillCategories = [
-  { name: "Frontend", icon: Code },
-  { name: "Backend", icon: Server },
-  { name: "Databases", icon: Database },
-  { name: "DevOps", icon: Cloud },
-  { name: "AI/ML", icon: Brain }
+    {
+        name: "Frontend",
+        icon: Code,
+        skills: [
+          { name: "React", icon: siReact },
+          { name: "Next.js", icon: siNextdotjs },
+          { name: "Tailwind CSS", icon: siTailwindcss },
+          { name: "Figma", icon: siFigma },
+          { name: "JavaScript", icon: siJavascript },
+          { name: "TypeScript", icon: siTypescript },
+          { name: "HTML", icon: siHtml5 },
+          { name: "CSS", icon: siCss3 },
+        ],
+    },
+    { 
+        name: "Backend", 
+        icon: Server,
+        skills: [
+            { name: "React", icon: siReact },
+            { name: "Next.js", icon: siNextdotjs },
+            { name: "Tailwind CSS", icon: siTailwindcss },
+            { name: "Figma", icon: siFigma },
+            { name: "JavaScript", icon: siJavascript },
+            { name: "TypeScript", icon: siTypescript },
+            { name: "HTML", icon: siHtml5 },
+            { name: "CSS", icon: siCss3 },
+        ], 
+    },
+    { 
+        name: "Databases", 
+        icon: Database, 
+        skills: [
+            { name: "React", icon: siReact },
+            { name: "Next.js", icon: siNextdotjs },
+            { name: "Tailwind CSS", icon: siTailwindcss },
+            { name: "Figma", icon: siFigma },
+            { name: "JavaScript", icon: siJavascript },
+            { name: "TypeScript", icon: siTypescript },
+            { name: "HTML", icon: siHtml5 },
+            { name: "CSS", icon: siCss3 },
+        ],
+    },
+    { 
+        name: "DevOps", 
+        icon: Cloud,
+        skills: [
+            { name: "React", icon: siReact },
+            { name: "Next.js", icon: siNextdotjs },
+            { name: "Tailwind CSS", icon: siTailwindcss },
+            { name: "Figma", icon: siFigma },
+            { name: "JavaScript", icon: siJavascript },
+            { name: "TypeScript", icon: siTypescript },
+            { name: "HTML", icon: siHtml5 },
+            { name: "CSS", icon: siCss3 },
+        ],
+    },
+    { 
+        name: "AI/ML", 
+        icon: Brain,
+        skills: [
+            { name: "React", icon: siReact },
+            { name: "Next.js", icon: siNextdotjs },
+            { name: "Tailwind CSS", icon: siTailwindcss },
+            { name: "Figma", icon: siFigma },
+            { name: "JavaScript", icon: siJavascript },
+            { name: "TypeScript", icon: siTypescript },
+            { name: "HTML", icon: siHtml5 },
+            { name: "CSS", icon: siCss3 },
+        ],
+    }
 ]
 
 export default function Skills(){
@@ -46,14 +112,28 @@ export default function Skills(){
                         </Button>
                     ))}
                 </div>
-                <div className="flex flex-wrap justify-center gap-4">
-                    <div className="flex flex-col items-center justify-center p-6 transition-colors border-2 border-primary rounded-lg">
-                        <div className="mb-4 rounded-lg p-3 text-primary">
-                            <GitBranch className="h-6 w-6" />
-                        </div>
-                        <h3 className="text-xl font-semibold">Git</h3>
-                    </div>
-                </div>
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 justify-center items-center">
+  {skillCategories
+    .find((category) => category.name === activeCategory)
+    ?.skills.map((skill, index) => (
+      <div
+        key={index}
+        className="flex flex-col items-center justify-start p-6 transition-colors border-2 border-primary rounded-lg text-center"
+      >
+        <div className="mb-4 rounded-lg p-3 text-primary">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            className="h-8 w-8"
+            fill="currentColor"
+          >
+            <path d={skill.icon.path} />
+          </svg>
+        </div>
+        <h3 className="text-xl font-semibold">{skill.name}</h3>
+      </div>
+    ))}
+</div>
             </div>
         </motion.section>
     )
