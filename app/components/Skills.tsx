@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import {motion} from "framer-motion";
 import { Code, Server, Database, Cloud, Brain } from 'lucide-react'
 import { useState } from "react";
-import { siReact, siNextdotjs, siTailwindcss, siFigma, siJavascript, siTypescript, siHtml5, siCss3 } from 'simple-icons';
+import { siReact, siNextdotjs, siTailwindcss, siFigma, siJavascript, siTypescript, siHtml5, siCss3, siPython, siNodedotjs, siExpress, siFlask, siFastapi, siStreamlit, siDjango, siMongodb, siSupabase, siAppwrite } from 'simple-icons';
 
 const skillCategories = [
     {
@@ -24,28 +24,23 @@ const skillCategories = [
         name: "Backend", 
         icon: Server,
         skills: [
-            { name: "React", icon: siReact },
+            { name: "Python", icon: siPython },
             { name: "Next.js", icon: siNextdotjs },
-            { name: "Tailwind CSS", icon: siTailwindcss },
-            { name: "Figma", icon: siFigma },
-            { name: "JavaScript", icon: siJavascript },
-            { name: "TypeScript", icon: siTypescript },
-            { name: "HTML", icon: siHtml5 },
-            { name: "CSS", icon: siCss3 },
+            { name: "Node.js", icon: siNodedotjs },
+            { name: "Express.js", icon: siExpress },
+            { name: "Flask", icon: siFlask },
+            { name: "FastAPI", icon: siFastapi },
+            { name: "Streamlit", icon: siStreamlit },
+            { name: "Django", icon: siDjango },
         ], 
     },
     { 
-        name: "Databases", 
+        name: "Databases",
         icon: Database, 
         skills: [
-            { name: "React", icon: siReact },
-            { name: "Next.js", icon: siNextdotjs },
-            { name: "Tailwind CSS", icon: siTailwindcss },
-            { name: "Figma", icon: siFigma },
-            { name: "JavaScript", icon: siJavascript },
-            { name: "TypeScript", icon: siTypescript },
-            { name: "HTML", icon: siHtml5 },
-            { name: "CSS", icon: siCss3 },
+            { name: "Mongodb", icon: siMongodb },
+            { name: "Supabase", icon: siSupabase },
+            { name: "Appwrite", icon: siAppwrite },
         ],
     },
     { 
@@ -112,28 +107,28 @@ export default function Skills(){
                         </Button>
                     ))}
                 </div>
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 justify-center items-center">
-  {skillCategories
-    .find((category) => category.name === activeCategory)
-    ?.skills.map((skill, index) => (
-      <div
-        key={index}
-        className="flex flex-col items-center justify-start p-6 transition-colors border-2 border-primary rounded-lg text-center"
-      >
-        <div className="mb-4 rounded-lg p-3 text-primary">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            className="h-8 w-8"
-            fill="currentColor"
-          >
-            <path d={skill.icon.path} />
-          </svg>
-        </div>
-        <h3 className="text-xl font-semibold">{skill.name}</h3>
-      </div>
-    ))}
-</div>
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 justify-center items-center md:m-0 mx-2">
+                    {skillCategories
+                        .find((category) => category.name === activeCategory)
+                        ?.skills.map((skill, index) => (
+                        <div
+                            key={index}
+                            className="flex flex-col items-center justify-start p-6 transition-colors border-2 border-primary rounded-lg text-center"
+                        >
+                            <div className="mb-4 rounded-lg p-3 text-primary">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                className="h-8 w-8"
+                                fill="currentColor"
+                            >
+                                <path d={skill.icon.path} />
+                            </svg>
+                            </div>
+                            <h3 className="text-xl font-semibold">{skill.name}</h3>
+                        </div>
+                    ))}
+                </div>
             </div>
         </motion.section>
     )
