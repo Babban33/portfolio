@@ -1,7 +1,7 @@
 "use client"
 import { Button } from "@/components/ui/button";
 import {motion} from "framer-motion";
-import { Code, Server, Database, Cloud, Brain } from 'lucide-react'
+import { Code, Server, Database, Cloud, Brain, GitBranch } from 'lucide-react'
 import { useState } from "react";
 
 const skillCategories = [
@@ -45,6 +45,14 @@ export default function Skills(){
                             {category.name}
                         </Button>
                     ))}
+                </div>
+                <div className="flex flex-wrap justify-center gap-4">
+                    <div className="flex flex-col items-center justify-center p-6 transition-colors border-2 border-primary rounded-lg">
+                        <div className="mb-4 rounded-lg p-3 text-primary">
+                            <GitBranch className="h-6 w-6" />
+                        </div>
+                        <h3 className="text-xl font-semibold">Git</h3>
+                    </div>
                 </div>
             </div>
         </motion.section>
