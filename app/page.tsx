@@ -5,6 +5,7 @@ import Experience from "./components/Experience";
 import HeroSection from "./components/HeroSection";
 import { AnimatePresence } from "framer-motion";
 import Project from "./components/Projects";
+import Skills from "./components/Skills";
 export default function Home(){
     return(
         <AnimatePresence mode="wait">
@@ -12,6 +13,7 @@ export default function Home(){
             <AboutMe key="about" />
             <Experience key="experience"/>
             <Project key="projects"/>
+            <Skills key="skills"/>
         </AnimatePresence>
     )
 }
