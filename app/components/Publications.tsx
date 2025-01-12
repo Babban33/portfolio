@@ -5,6 +5,11 @@ import { ExternalLink } from "lucide-react";
 
 const publication = [
     {
+        title: "Smart Web-based Application for Dental Disease Detection using AI",
+        journal: "Patent",
+        date: "January 2024",
+    },
+    {
         title: "Convex Hull Algorithm based Virtual Mouse",
         journal: "Grenze International Journal of Engineering and Technology",
         date: "January 2024",
@@ -36,7 +41,7 @@ export default function Publications(){
                 >
                     Publications
                 </motion.h2>
-                <div className="flex flex-wrap justify-center gap-6">
+                <div className="flex flex-row flex-wrap justify-center gap-6">
                     {publication.map((pub, index)=>(
                         <Card key={index} className="w-full max-w-md">
                             <CardHeader>
