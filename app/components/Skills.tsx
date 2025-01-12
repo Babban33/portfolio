@@ -15,7 +15,13 @@ const skillCategories = [
 export default function Skills(){
     const [activeCategory, setActiveCategory] = useState("Frontend");
     return(
-        <section className="py-16 sm:py-32 bg-muted/50">
+        <motion.section 
+            className="py-16 sm:py-32 bg-muted/50"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            id="skills"
+        >
             <div className="container max-w-screen-xl mx-auto">
                 <motion.h2 
                     className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8 text-center"
@@ -41,6 +47,6 @@ export default function Skills(){
                     ))}
                 </div>
             </div>
-        </section>
+        </motion.section>
     )
 }
