@@ -3,6 +3,19 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 
+const publication = [
+    {
+        title: "Convex Hull Algorithm based Virtual Mouse",
+        journal: "Grenze International Journal of Engineering and Technology",
+        date: "January 2024",
+    },
+    {
+        title: "An IoT-Enabled Smart Gardening System as a Novel Approach to Environmental Education",
+        journal: "IEEE RESEM",
+        date: "May, 2023",
+    },
+]
+
 export default function Publications(){
     return(
         <motion.section
