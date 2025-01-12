@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import {motion} from "framer-motion";
 import { Code, Server, Database, Cloud, Brain } from 'lucide-react'
 import { useState } from "react";
-import { siReact, siNextdotjs, siTailwindcss, siFigma, siJavascript, siTypescript, siHtml5, siCss3, siPython, siNodedotjs, siExpress, siFlask, siFastapi, siStreamlit, siDjango, siMongodb, siSupabase, siAppwrite } from 'simple-icons';
+import { siReact, siNextdotjs, siTailwindcss, siFigma, siJavascript, siTypescript, siHtml5, siCss3, siPython, siNodedotjs, siExpress, siFlask, siFastapi, siStreamlit, siDjango, siMongodb, siSupabase, siAppwrite, siGit, siGithub, siDocker, siWebpack, siSqlite, siVercel } from 'simple-icons';
 
 const skillCategories = [
     {
@@ -41,20 +41,18 @@ const skillCategories = [
             { name: "Mongodb", icon: siMongodb },
             { name: "Supabase", icon: siSupabase },
             { name: "Appwrite", icon: siAppwrite },
+            { name: "SQL", icon: siSqlite}
         ],
     },
     { 
         name: "DevOps", 
         icon: Cloud,
         skills: [
-            { name: "React", icon: siReact },
-            { name: "Next.js", icon: siNextdotjs },
-            { name: "Tailwind CSS", icon: siTailwindcss },
-            { name: "Figma", icon: siFigma },
-            { name: "JavaScript", icon: siJavascript },
-            { name: "TypeScript", icon: siTypescript },
-            { name: "HTML", icon: siHtml5 },
-            { name: "CSS", icon: siCss3 },
+            { name: "Git", icon: siGit },
+            { name: "Github", icon: siGithub },
+            { name: "Docker", icon: siDocker },
+            { name: "Azure", icon: siWebpack },
+            { name: "Vecel", icon: siVercel}
         ],
     },
     { 
