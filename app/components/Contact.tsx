@@ -78,7 +78,11 @@ export default function ContactSection() {
                             </CardContent>
                         </Card>
                     </motion.div>
-                    <div>
+                    <motion.div
+                        initial={{ opacity: 0, x: 50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: 0.4 }}
+                    >
                         <Card>
                             <CardHeader>
                                 <CardTitle>Contact Information</CardTitle>
@@ -86,20 +90,20 @@ export default function ContactSection() {
                             </CardHeader>
                             <CardContent className="space-y-4">
                                 <div className="flex items-center">
-                                <Mail className="mr-2 h-4 w-4" />
-                                <a href="mailto:your.email@example.com" className="hover:underline">your.email@example.com</a>
+                                    <Mail className="mr-2 h-4 w-4" />
+                                    <a href="mailto:chaitanyawankhede705@gmail.com" className="hover:underline">chaitanyawankhede705@gmail.com</a>
                                 </div>
                                 <div className="flex items-center">
-                                <Phone className="mr-2 h-4 w-4" />
-                                <a href="tel:+1234567890" className="hover:underline">+1 (234) 567-890</a>
+                                    <Phone className="mr-2 h-4 w-4" />
+                                    <a href="tel:+1234567890" className="hover:underline">+91 9359546005</a>
                                 </div>
                                 <div className="flex items-center">
-                                <MapPin className="mr-2 h-4 w-4" />
-                                <span>San Francisco, CA, USA</span>
+                                    <MapPin className="mr-2 h-4 w-4" />
+                                    <span>Bhandara, Maharashta, India</span>
                                 </div>
                             </CardContent>
                         </Card>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </motion.section>
