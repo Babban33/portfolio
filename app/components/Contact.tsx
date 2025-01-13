@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Send, } from 'lucide-react'
+import {motion} from 'framer-motion'
 
 export default function ContactSection() {
     const [name, setName] = useState("")
@@ -21,7 +22,10 @@ export default function ContactSection() {
     }
 
     return (
-        <section 
+        <motion.section
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
             id="contact" 
             className="py-20 sm:py-32 bg-muted/50"
         >
@@ -67,6 +71,6 @@ export default function ContactSection() {
                     </div>
                 </div>
             </div>
-        </section>
+        </motion.section>
     )
 }
