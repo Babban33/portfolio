@@ -1,7 +1,9 @@
+"use client"
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
+import { useTheme } from "next-themes";
 
 const publication = [
     {
@@ -22,6 +24,7 @@ const publication = [
 ]
 
 export default function Publications(){
+    const {theme} = useTheme();
     return(
         <motion.section
             initial={{ opacity: 0 }}
@@ -43,7 +46,7 @@ export default function Publications(){
                 </motion.h2>
                 <div className="flex flex-row flex-wrap justify-center gap-6 px-4">
                     {publication.map((pub, index)=>(
-                        <Card key={index} className="w-full max-w-md">
+                        <Card key={index} className={`w-full max-w-md hover:shadow-lg ${theme === 'dark' ? 'hover:shadow-primary/25' : 'hover:shadow-primary/50'}`}>
                             <CardHeader>
                                 <CardTitle className="text-xl">{pub.title}</CardTitle>
                                 <p className="text-sm text-muted-foreground">{pub.journal} • {pub.date}</p>
