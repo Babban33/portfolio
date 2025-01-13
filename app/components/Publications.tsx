@@ -48,7 +48,7 @@ export default function Publications() {
                     {publications.map((pub, index) => (
                         <Card
                             key={index}
-                            className={`hover:shadow-lg transition-shadow duration-300 max-w-[30rem] dark:hover:shadow-primary/25 hover:shadow-primary/50`}
+                            className={`shadow-lg transition-shadow duration-300 max-w-[30rem] dark:shadow-primary/25 shadow-primary/50`}
                         >
                         <CardHeader>
                             <CardTitle className="text-xl">{pub.title}</CardTitle>
