@@ -7,7 +7,6 @@ import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Mail, MapPin, Phone, Send, } from 'lucide-react'
 import {motion} from 'framer-motion'
-import { useTheme } from "next-themes"
 
 export default function ContactSection() {
     const [name, setName] = useState("")
@@ -21,7 +20,6 @@ export default function ContactSection() {
         setEmail("")
         setMessage("")
     }
-    const {theme} = useTheme();
     return (
         <motion.section
             initial={{ opacity: 0 }}
@@ -45,7 +43,7 @@ export default function ContactSection() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.3 }}
                     >
-                        <Card className={`hover:shadow-lg ${theme === 'dark' ? 'hover:shadow-primary/25' : 'hover:shadow-primary/50'}`}>
+                        <Card className={`hover:shadow-lg dark:hover:shadow-primary/25' hover:shadow-primary/50`}>
                             <CardHeader>
                                 <CardTitle>Get in Touch</CardTitle>
                                 <CardDescription>Fill out the form and I&apos;ll get back to you as soon as possible.</CardDescription>
@@ -89,7 +87,7 @@ export default function ContactSection() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.4 }}
                     >
-                        <Card className={`hover:shadow-lg ${theme === 'dark' ? 'hover:shadow-primary/25' : 'hover:shadow-primary/50'}`}>
+                        <Card className={`hover:shadow-lg dark:hover:shadow-primary/25 hover:shadow-primary/50`}>
                             <CardHeader>
                                 <CardTitle>Contact Information</CardTitle>
                                 <CardDescription>Feel free to reach out through any of these channels.</CardDescription>
