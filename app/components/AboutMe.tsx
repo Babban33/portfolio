@@ -1,10 +1,14 @@
+"use client"
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BookOpen, Code, Linkedin, Mail, MessageSquare, Phone } from "lucide-react";
 import Link from "next/link";
 import {motion} from "framer-motion";
 import { siCodingninjas, siGithub, siLeetcode, siWhatsapp } from "simple-icons";
+import { useTheme } from "next-themes";
 
 export default function AboutMe() {
+    const {theme} = useTheme();
     return(
         <motion.section 
             className="bg-muted/50 py-20 sm:py-32"
@@ -28,7 +32,7 @@ export default function AboutMe() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.3 }}
                     >
-                        <Card className="h-full">
+                        <Card className={`h-full hover:shadow-lg ${theme === 'dark' ? 'hover:shadow-primary/25' : 'hover:shadow-primary/50'}`}>
                             <CardHeader>
                                 <CardTitle className="flex items-center text-2xl">
                                 <BookOpen className="mr-2" /> My Story
@@ -50,7 +54,7 @@ export default function AboutMe() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.4 }}
                         >
-                            <Card>
+                            <Card  className={`hover:shadow-lg ${theme === 'dark' ? 'hover:shadow-primary/25' : 'hover:shadow-primary/50'}`}>
                                 <CardHeader>
                                     <CardTitle className="flex items-center">
                                         <Code className="mr-2" /> Coding Profiles
@@ -85,7 +89,7 @@ export default function AboutMe() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.5 }}
                         >
-                            <Card>
+                            <Card className={`hover:shadow-lg ${theme === 'dark' ? 'hover:shadow-primary/25' : 'hover:shadow-primary/50'}`}>
                                 <CardHeader>
                                     <CardTitle className="flex items-center">
                                         <MessageSquare className="mr-2" /> Social Links
