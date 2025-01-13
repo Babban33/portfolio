@@ -1,9 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { BookOpen, Code, Github, Linkedin, Mail, MessageSquare, Phone } from "lucide-react";
+import { BookOpen, Code, Linkedin, Mail, MessageSquare, Phone } from "lucide-react";
 import Link from "next/link";
 import {motion} from "framer-motion";
-import WhatsAppIcon from "@/components/icons/whatsapp-icon";
-import { siCodingninjas, siLeetcode } from "simple-icons";
+import { siCodingninjas, siGithub, siLeetcode, siWhatsapp } from "simple-icons";
 
 export default function AboutMe() {
     return(
@@ -95,7 +94,14 @@ export default function AboutMe() {
                                 <CardContent>
                                 <div className="flex justify-around">
                                     <Link href="" target="_blank" rel="noopener noreferrer">
-                                        <WhatsAppIcon className="w-8 h-8 text-foreground hover:text-primary transition-colors" />
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24"
+                                            className="w-8 h-8 text-foreground hover:text-primary transition-colors"
+                                            fill="currentColor"
+                                        >
+                                            <path d={siWhatsapp.path} />
+                                        </svg>
                                     </Link>
                                     <Link href="https://linkedin.com/in/chaitanyasw" target="_blank" rel="noopener noreferrer">
                                         <Linkedin className="w-8 h-8 text-foreground hover:text-primary transition-colors" />
@@ -107,7 +113,14 @@ export default function AboutMe() {
                                         <Phone className="w-8 h-8 text-foreground hover:text-primary transition-colors" />
                                     </Link>
                                     <Link href="https://github.com/Babban33" target="_blank" rel="noopener noreferrer">
-                                        <Github className="w-8 h-8 text-foreground hover:text-primary transition-colors" />
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24"
+                                            className="w-8 h-8 text-foreground hover:text-primary transition-colors"
+                                            fill="currentColor"
+                                        >
+                                            <path d={siGithub.path} />
+                                        </svg>
                                     </Link>
                                 </div>
                                 </CardContent>
