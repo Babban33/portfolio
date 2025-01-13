@@ -72,7 +72,7 @@ export default function Experience() {
                                 <p className="text-sm text-muted-foreground mb-4">{experience.company} | {experience.period}</p>
                                 <div className="flex flex-wrap gap-2 mb-4">
                                     {experience.skills.map((skill) => (
-                                        <Badge key={skill} variant="secondary" className={`bg-gradient-to-r ${experience.colorhead} rounded-full text-primary-foreground`}>
+                                        <Badge key={skill} variant="secondary" className={`bg-gradient-to-r ${experience.colorhead} rounded-full text-white`}>
                                             {skill}
                                         </Badge>
                                     ))}
