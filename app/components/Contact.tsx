@@ -56,6 +56,8 @@ export default function ContactSection() {
                                     value={name}
                                     onChange={(e) => setName(e.target.value)}
                                     required
+                                    id="name"
+                                    autoComplete="name"
                                 />
                                 <Input
                                     type="email"
@@ -63,6 +65,8 @@ export default function ContactSection() {
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                     required
+                                    id="email"
+                                    autoComplete="email"
                                 />
                                 <Textarea
                                     placeholder="Your Message"
@@ -70,6 +74,7 @@ export default function ContactSection() {
                                     onChange={(e) => setMessage(e.target.value)}
                                     required
                                     className="min-h-[100px]"
+                                    id="messagde"
                                 />
                                 <Button type="submit" className="w-full rounded-full">
                                     <Send className="mr-2 h-4 w-4" /> Send Message
