@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { motion } from "framer-motion"
 import { ExternalLink } from 'lucide-react'
-import { useTheme } from "next-themes"
 
 const publications = [
     {
@@ -25,7 +24,6 @@ const publications = [
 ]
 
 export default function Publications() {
-    const { theme } = useTheme()
 
     return (
         <motion.section
@@ -50,9 +48,7 @@ export default function Publications() {
                     {publications.map((pub, index) => (
                         <Card
                             key={index}
-                            className={`hover:shadow-lg transition-shadow duration-300 max-w-[30rem] ${
-                                theme === "dark" ? "hover:shadow-primary/25" : "hover:shadow-primary/50"
-                            }`}
+                            className={`hover:shadow-lg transition-shadow duration-300 max-w-[30rem] dark:hover:shadow-primary/25 hover:shadow-primary/50`}
                         >
                         <CardHeader>
                             <CardTitle className="text-xl">{pub.title}</CardTitle>
