@@ -41,7 +41,7 @@ export default function Publications(){
                 >
                     Publications
                 </motion.h2>
-                <div className="flex flex-row flex-wrap justify-center gap-6">
+                <div className="flex flex-row flex-wrap justify-center gap-6 px-4">
                     {publication.map((pub, index)=>(
                         <Card key={index} className="w-full max-w-md">
                             <CardHeader>

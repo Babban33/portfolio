@@ -55,7 +55,7 @@ export default function Experience() {
         <section className="py-16 bg-muted/30" id="optional">
             <div className="container max-w-screen-xl mx-auto">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8 text-center">Experience</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
                     {experiences.map((experience, index) => (
                         <Card key={index} className="overflow-hidden">
                             <CardContent className="p-6">
