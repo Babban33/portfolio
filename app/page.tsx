@@ -7,6 +7,7 @@ import { AnimatePresence } from "framer-motion";
 import Project from "./components/Projects";
 import Skills from "./components/Skills";
 import Publications from "./components/Publications";
+import ContactSection from "./components/Contact";
 export default function Home(){
     return(
         <AnimatePresence mode="wait">
@@ -16,6 +17,7 @@ export default function Home(){
             <Project key="projects"/>
             <Skills key="skills"/>
             <Publications key="publications"/>
+            <ContactSection key="contsct"/>
         </AnimatePresence>
     )
 }
