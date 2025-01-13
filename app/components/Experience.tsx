@@ -6,7 +6,6 @@ import { Card, CardContent } from "@/components/ui/card"
 import { ScrollArea } from "@radix-ui/react-scroll-area"
 import { ChevronRight, X } from "lucide-react"
 import { useState } from "react"
-import { useTheme } from "next-themes"
 
 const experiences = [
     {
@@ -58,14 +57,13 @@ const experiences = [
 
 export default function Experience() {
     const [selectedExp, setSelectedExp] = useState<number | null>(null)
-    const {theme} = useTheme();
     return (
         <section className="py-16 bg-muted/30" id="experience">
             <div className="container max-w-screen-xl mx-auto">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8 text-center">Experience</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
                     {experiences.map((experience, index) => (
-                        <Card key={index} className={`overflow-hidden hover:shadow-lg ${theme === 'dark' ? 'hover:shadow-primary/25' : 'hover:shadow-primary/50'}`}>
+                        <Card key={index} className={`overflow-hidden hover:shadow-lg dark:hover:shadow-primary/25 hover:shadow-primary/50`}>
                             <div className={`h-2 bg-gradient-to-r ${experience.colorhead}`} />
                             <CardContent className="p-6">
                                 <h3 className="text-xl font-semibold mb-2">{experience.title}</h3>
@@ -130,7 +128,7 @@ export default function Experience() {
                                         <h6 className="font-semibold mb-2">Technologies Used:</h6>
                                         <div className="flex flex-wrap gap-2">
                                         {experiences[selectedExp].technologies.map((tech) =>(
-                                            <Badge key={tech} className="rounded-full">
+                                            <Badge key={tech} className="rounded-full text-white">
                                                 {tech}
                                             </Badge>
                                         ))}
