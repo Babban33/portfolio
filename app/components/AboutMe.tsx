@@ -60,8 +60,8 @@ export default function AboutMe() {
                                 <CardContent>
                                 <ul className="space-y-2">
                                     {[
-                                        { name: "LeetCode", url: "https://leetcode.com/yourusername", logo: "https://assets.leetcode.com/static_assets/public/images/LeetCode_logo_rvs.png" },
-                                        { name: "Coding Ninjas", url: "https://www.codingninjas.com/codestudio/profile/yourusername", logo: "https://files.codingninjas.in/cn-logo-dark-9824.svg" }
+                                        { name: "LeetCode", url: "https://leetcode.com/u/ChaitanyaWankhede/", logo: "https://assets.leetcode.com/static_assets/public/images/LeetCode_logo_rvs.png" },
+                                        { name: "Coding Ninjas", url: "https://www.naukri.com/code360/profile/53ed3b23-6983-4405-a897-fc0c1249eccb", logo: "https://files.codingninjas.in/cn-logo-dark-9824.svg" }
                                     ].map((profile) => (
                                         <li key={profile.name}>
                                             <Link href={profile.url} target="_blank" rel="noreferrer" className="text-foreground hover:underline flex items-center">
