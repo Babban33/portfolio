@@ -90,7 +90,7 @@ export default function Skills(){
                 </motion.h2>
 
                 {/* Catergory buttons */}
-                <div className="flex flex-wrap justify-center mb-8 gap-4">
+                <div className="flex flex-wrap justify-center mb-8 gap-4 px-4">
                     {skillCategories.map((category) => (
                         <Button
                             key={category.name}
