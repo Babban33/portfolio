@@ -14,42 +14,45 @@ const experiences = [
         title: "Junior Research Fellow",
         period: "Dec 2023 - Jun 2024",
         description: "Worked on both Hardware and Software as well as Researched on the project.",
-        skills: ['Frontend', 'Design', 'Performance'],
+        skills: ['Full Stack', 'AI/ML', 'IoT'],
         projects: [
         "Documented Code resulting in better understanding of everything by 50%",
         "Trained 5 AI models achieveing an average accuracy of 90%",
         "Delpoyed models as RestfulAPIs. Crafted a responsive frontend increasing user engagement by 80%"
         ],
         technologies: ['Python', 'Tensorflow', 'FastAPI', 'React', 'Pytorch', 'Docker'],
-        colorhead : "from-blue-500 to-cyan-500"
+        colorhead : "from-blue-500 to-cyan-500",
+        badge: "bg-blue-500"
     },
     {
         company: "Alhansat Solutions",
         title: "Software Developer Intern",
         period: "Sept 2023 - Oct 2023",
         description: "Crafted a Resume Builder feature for the company's website.",
-        skills: ['Frontend', 'Design', 'Performance'],
+        skills: ['Frontend', 'Design', 'Leadership'],
         projects: [
         "Led a team of 12 developers as well as taught version control and svelte",
         "Made open-spurce contibutions and managed the repository reducing conflicts by 70%",
         "Got Selected as top contributor from a pool of 200 developers"
         ],
         technologies: ['Svelte', 'Javascript', 'Tailwind CSS', 'Figma', 'Git', 'Github'],
-        colorhead: "from-purple-500 to-pink-500"
+        colorhead: "from-purple-500 to-pink-500",
+        badge: "bg-purple-500"
     },
     {
         company: "Ineuron AI",
         title: "Software Developer Intern",
         period: "Mar 2023 - Jun 2023",
         description: "Trained and deployed a classification ML model using Python and Docker.",
-        skills: ['Frontend', 'Design', 'Performance'],
+        skills: ['AI/ML', 'Frontend', 'DevOps'],
         projects: [
         "Trained an XGBoost model with 95% accuracy on the test dataset",
         "Deployed the model as an endpoint using Flask and Jinja2Template",
         "Developed a simple frontend using HTML, CSS and Javascript to interact with model"
         ],
         technologies: ['Python', 'Scikit-learn', 'FastAPI', 'HTML', 'CSS', 'Docker', 'Azure'],
-        colorhead: "from-orange-500 to-yellow-500"
+        colorhead: "from-orange-500 to-yellow-500",
+        badge: "bg-orange-500"
     },
 ]
 
@@ -69,7 +72,7 @@ export default function Experience() {
                                 <p className="text-sm text-muted-foreground mb-4">{experience.company} | {experience.period}</p>
                                 <div className="flex flex-wrap gap-2 mb-4">
                                     {experience.skills.map((skill) => (
-                                        <Badge key={skill} variant="secondary">
+                                        <Badge key={skill} variant="secondary" className={`bg-gradient-to-r ${experience.colorhead} rounded-full text-primary-foreground`}>
                                             {skill}
                                         </Badge>
                                     ))}
@@ -112,7 +115,6 @@ export default function Experience() {
                                         <li key={index}>{project}</li>
                                     ))}
                                 </ul>
-                                {/* you were the moon. you shined bright in the darkness. was he the sun? no, he was the darkness. */}
                                 <div className="grid grid-cols-2 gap-4 my-4">
                                     <div>
                                         <h6 className="font-semibold mb-2">Skills Used:</h6>
