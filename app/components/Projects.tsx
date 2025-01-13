@@ -65,7 +65,7 @@ export default function Project(){
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: index * 0.2 }}
                         >
-                            <Card className={`flex flex-col overflow-hidden h-full group hover:shadow-lg dark:hover:shadow-primary/25 hover:shadow-primary/50`}>
+                            <Card className={`flex flex-col overflow-hidden h-full group shadow-lg dark:shadow-primary/25 shadow-primary/50`}>
                                 <CardHeader className="p-0">
                                     <div className="relative overflow-hidden">
                                         <Image
