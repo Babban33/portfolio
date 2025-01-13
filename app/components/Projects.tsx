@@ -16,6 +16,7 @@ const projects = [
       description: "Code documentation for the BIRAC Dental Project.",
       image: "/globe.svg?height=200&width=300",
       techStack: ["Docusaurus", "Nextjs", "React", "Tailwind CSS"],
+      color: "from-blue-500 to-cyan-500",
       githubLink: "https://github.com/babban33/dental-docs",
       liveLink: "https://ai-task-manager.example.com",
     },
@@ -24,6 +25,7 @@ const projects = [
       description: "Full Stack notes app with enhanced privacy and security.",
       image: "/globe.svg?height=200&width=300",
       techStack: ["Nextjs", "Typescript", "React", "Supabase"],
+      color: "from-purple-500 to-pink-500",
       githubLink: "https://github.com/babban33/note-wave",
       liveLink: "https://blockchain-voting.example.com",
     },
@@ -32,6 +34,7 @@ const projects = [
         description: "Full Stack notes app with enhanced privacy and security.",
         image: "/globe.svg?height=200&width=300",
         techStack: ["Nextjs", "Typescript", "React", "Supabase"],
+        color: "from-orange-500 to-yellow-500",
         githubLink: "https://github.com/babban33/note-wave",
         liveLink: "https://blockchain-voting.example.com",
     },
@@ -64,57 +67,58 @@ export default function Project(){
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: index * 0.2 }}
                         >
-                        <Card className={`flex flex-col overflow-hidden h-full group hover:shadow-lg ${theme === 'dark' ? 'hover:shadow-primary/25' : 'hover:shadow-primary/50'}`}>
-                            <CardHeader className="p-0">
-                            <div className="relative overflow-hidden">
-                                <Image
-                                src={project.image}
-                                alt={project.title}
-                                width={300}
-                                height={200}
-                                className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
-                                />
-                                <div className="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <Button asChild variant="secondary" className="rounded-full">
-                                    <Link href={project.liveLink} target="_blank" rel="noopener noreferrer">
-                                    View Project
-                                    </Link>
-                                </Button>
-                                </div>
-                            </div>
-                            </CardHeader>
-                            <CardContent className="flex-grow p-6">
-                            <CardTitle className="text-xl mb-2">{project.title}</CardTitle>
-                            <CardDescription className="mb-4">{project.description}</CardDescription>
-                            <div className="flex flex-wrap gap-2 mb-4">
-                                {project.techStack.map((tech, techIndex) => (
-                                <Badge key={`tech-${index}-${techIndex}`} variant="secondary">{tech}</Badge>
-                                ))}
-                            </div>
-                            </CardContent>
-                            <CardFooter className="flex justify-between border-t pt-4">
-                            <Button asChild variant="ghost" size="sm" className="rounded-full">
-                                <Link href={project.githubLink} target="_blank" rel="noopener noreferrer">
-                                {/* <Github className="mr-2 h-4 w-4" /> */}
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
-                                    className="mr-2 h-4 w-4"
-                                    fill='currentColor'
-                                >
-                                    <path d={siGithub.path} />
-                                </svg>
-                                GitHub
-                                </Link>
-                            </Button>
-                            <Button asChild variant="ghost" size="sm" className="rounded-full">
-                                <Link href={project.liveLink} target="_blank" rel="noopener noreferrer">
-                                <ExternalLink className="mr-2 h-4 w-4" />
-                                Live Demo
-                                </Link>
-                            </Button>
-                            </CardFooter>
-                        </Card>
+                            <Card className={`flex flex-col overflow-hidden h-full group hover:shadow-lg ${theme === 'dark' ? 'hover:shadow-primary/25' : 'hover:shadow-primary/50'}`}>
+                                <CardHeader className="p-0">
+                                    <div className="relative overflow-hidden">
+                                        <Image
+                                        src={project.image}
+                                        alt={project.title}
+                                        width={300}
+                                        height={200}
+                                        className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                                        />
+                                        <div className="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <Button asChild variant="secondary" className="rounded-full">
+                                            <Link href={project.liveLink} target="_blank" rel="noopener noreferrer">
+                                            View Project
+                                            </Link>
+                                        </Button>
+                                        </div>
+                                    </div>
+                                </CardHeader>
+                                <CardContent className="flex-grow p-6">
+                                    <CardTitle className="text-xl mb-2">{project.title}</CardTitle>
+                                    <CardDescription className="mb-4">{project.description}</CardDescription>
+                                    <div className="flex flex-wrap gap-2 mb-4">
+                                        {project.techStack.map((tech, techIndex) => (
+                                        <Badge key={`tech-${index}-${techIndex}`} variant="secondary" className={`bg-gradient-to-r ${project.color} text-white`}>{tech}</Badge>
+                                        ))}
+                                    </div>
+                                </CardContent>
+                                <CardFooter className="flex justify-between border-t pt-4">
+                                    <Button asChild variant="ghost" size="sm" className="rounded-full">
+                                        <Link href={project.githubLink} target="_blank" rel="noopener noreferrer">
+                                        {/* <Github className="mr-2 h-4 w-4" /> */}
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24"
+                                            className="mr-2 h-4 w-4"
+                                            fill='currentColor'
+                                        >
+                                            <path d={siGithub.path} />
+                                        </svg>
+                                        GitHub
+                                        </Link>
+                                    </Button>
+                                    <Button asChild variant="ghost" size="sm" className="rounded-full">
+                                        <Link href={project.liveLink} target="_blank" rel="noopener noreferrer">
+                                        <ExternalLink className="mr-2 h-4 w-4" />
+                                        Live Demo
+                                        </Link>
+                                    </Button>
+                                </CardFooter>
+                                <div className={`h-2 bg-gradient-to-r ${project.color}`} />
+                            </Card>
                         </motion.div>
                     ))}
                 </div>
