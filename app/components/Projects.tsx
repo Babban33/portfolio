@@ -13,20 +13,20 @@ const projects = [
     {
       title: "Dental Docs",
       description: "Code documentation for the BIRAC Dental Project.",
-      image: "/globe.svg?height=200&width=300",
+      image: "/dental-docs.png?height=200&width=300",
       techStack: ["Docusaurus", "Nextjs", "React", "Tailwind CSS"],
       color: "from-blue-500 to-cyan-500",
       githubLink: "https://github.com/babban33/dental-docs",
-      liveLink: "https://ai-task-manager.example.com",
+      liveLink: "https://dental-docs.vercel.app",
     },
     {
       title: "Notewave",
       description: "Full Stack notes app with enhanced privacy and security.",
-      image: "/globe.svg?height=200&width=300",
+      image: "/notewave.png?height=200&width=300",
       techStack: ["Nextjs", "Typescript", "React", "Supabase"],
       color: "from-purple-500 to-pink-500",
-      githubLink: "https://github.com/babban33/note-wave",
-      liveLink: "https://blockchain-voting.example.com",
+      githubLink: "https://github.com/babban33/notewave",
+      liveLink: "https://notewave-five.vercel.app",
     },
     {
         title: "Notewave",
@@ -96,11 +96,10 @@ export default function Project(){
                                 <CardFooter className="flex justify-between border-t pt-4">
                                     <Button asChild variant="ghost" size="sm" className="rounded-full">
                                         <Link href={project.githubLink} target="_blank" rel="noopener noreferrer">
-                                        {/* <Github className="mr-2 h-4 w-4" /> */}
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 24 24"
-                                            className="mr-2 h-4 w-4"
+                                            className="mr-2 h-4 w-4 text-gradient"
                                             fill='currentColor'
                                         >
                                             <path d={siGithub.path} />
