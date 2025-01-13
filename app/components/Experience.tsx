@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { ScrollArea } from "@radix-ui/react-scroll-area"
 import { ChevronRight, X } from "lucide-react"
 import { useState } from "react"
+import { useTheme } from "next-themes"
 
 const experiences = [
     {
@@ -19,7 +20,8 @@ const experiences = [
         "Trained 5 AI models achieveing an average accuracy of 90%",
         "Delpoyed models as RestfulAPIs. Crafted a responsive frontend increasing user engagement by 80%"
         ],
-        technologies: ['Python', 'Tensorflow', 'FastAPI', 'React', 'Pytorch', 'Docker']
+        technologies: ['Python', 'Tensorflow', 'FastAPI', 'React', 'Pytorch', 'Docker'],
+        colorhead : "from-blue-500 to-cyan-500"
     },
     {
         company: "Alhansat Solutions",
@@ -32,7 +34,8 @@ const experiences = [
         "Made open-spurce contibutions and managed the repository reducing conflicts by 70%",
         "Got Selected as top contributor from a pool of 200 developers"
         ],
-        technologies: ['Svelte', 'Javascript', 'Tailwind CSS', 'Figma', 'Git', 'Github'], 
+        technologies: ['Svelte', 'Javascript', 'Tailwind CSS', 'Figma', 'Git', 'Github'],
+        colorhead: "from-purple-500 to-pink-500"
     },
     {
         company: "Ineuron AI",
@@ -45,19 +48,22 @@ const experiences = [
         "Deployed the model as an endpoint using Flask and Jinja2Template",
         "Developed a simple frontend using HTML, CSS and Javascript to interact with model"
         ],
-        technologies: ['Python', 'Scikit-learn', 'FastAPI', 'HTML', 'CSS', 'Docker', 'Azure']
+        technologies: ['Python', 'Scikit-learn', 'FastAPI', 'HTML', 'CSS', 'Docker', 'Azure'],
+        colorhead: "from-orange-500 to-yellow-500"
     },
 ]
 
 export default function Experience() {
     const [selectedExp, setSelectedExp] = useState<number | null>(null)
+    const {theme} = useTheme();
     return (
         <section className="py-16 bg-muted/30" id="optional">
             <div className="container max-w-screen-xl mx-auto">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8 text-center">Experience</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
                     {experiences.map((experience, index) => (
-                        <Card key={index} className="overflow-hidden">
+                        <Card key={index} className={`overflow-hidden hover:shadow-lg ${theme === 'dark' ? 'hover:shadow-primary/25' : 'hover:shadow-primary/50'}`}>
+                            <div className={`h-2 bg-gradient-to-r ${experience.colorhead}`} />
                             <CardContent className="p-6">
                                 <h3 className="text-xl font-semibold mb-2">{experience.title}</h3>
                                 <p className="text-sm text-muted-foreground mb-4">{experience.company} | {experience.period}</p>
