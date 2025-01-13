@@ -43,7 +43,7 @@ export default function ContactSection() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.3 }}
                     >
-                        <Card className={`hover:shadow-lg dark:hover:shadow-primary/25' hover:shadow-primary/50`}>
+                        <Card className={`shadow-lg dark:shadow-primary/25 shadow-primary/50`}>
                             <CardHeader>
                                 <CardTitle>Get in Touch</CardTitle>
                                 <CardDescription>Fill out the form and I&apos;ll get back to you as soon as possible.</CardDescription>
@@ -87,7 +87,7 @@ export default function ContactSection() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.4 }}
                     >
-                        <Card className={`hover:shadow-lg dark:hover:shadow-primary/25 hover:shadow-primary/50`}>
+                        <Card className={`shadow-lg dark:shadow-primary/25 shadow-primary/50`}>
                             <CardHeader>
                                 <CardTitle>Contact Information</CardTitle>
                                 <CardDescription>Feel free to reach out through any of these channels.</CardDescription>
