@@ -30,9 +30,14 @@ export default function ContactSection() {
             className="py-20 sm:py-32 bg-muted/50"
         >
             <div className="container">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center">
+                <motion.h2 
+                    className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center"
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                >
                     Contact Me
-                </h2>
+                </motion.h2>
                 <div className="grid gap-8 md:grid-cols-2 px-4">
                     <div>
                         <Card>
