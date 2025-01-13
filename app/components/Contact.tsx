@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Send, } from 'lucide-react'
+import { Mail, MapPin, Phone, Send, } from 'lucide-react'
 import {motion} from 'framer-motion'
 
 export default function ContactSection() {
@@ -78,6 +78,28 @@ export default function ContactSection() {
                             </CardContent>
                         </Card>
                     </motion.div>
+                    <div>
+                        <Card>
+                            <CardHeader>
+                                <CardTitle>Contact Information</CardTitle>
+                                <CardDescription>Feel free to reach out through any of these channels.</CardDescription>
+                            </CardHeader>
+                            <CardContent className="space-y-4">
+                                <div className="flex items-center">
+                                <Mail className="mr-2 h-4 w-4" />
+                                <a href="mailto:your.email@example.com" className="hover:underline">your.email@example.com</a>
+                                </div>
+                                <div className="flex items-center">
+                                <Phone className="mr-2 h-4 w-4" />
+                                <a href="tel:+1234567890" className="hover:underline">+1 (234) 567-890</a>
+                                </div>
+                                <div className="flex items-center">
+                                <MapPin className="mr-2 h-4 w-4" />
+                                <span>San Francisco, CA, USA</span>
+                                </div>
+                            </CardContent>
+                        </Card>
+                    </div>
                 </div>
             </div>
         </motion.section>
