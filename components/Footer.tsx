@@ -1,5 +1,6 @@
-import { Github, Linkedin } from 'lucide-react'
+import { Linkedin } from 'lucide-react'
 import Link from "next/link"
+import { siGithub } from 'simple-icons'
 
 export default function Footer() {
     return (
@@ -22,7 +23,14 @@ export default function Footer() {
                     </div>
                     <div className="flex items-center space-x-4">
                         <Link href="https://github.com/Babban33" target="_blank" rel="noreferrer">
-                            <Github className="h-5 w-5" />
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                className="h-5 w-5"
+                                fill="currentColor"
+                            >
+                                <path d={siGithub.path}/>
+                            </svg>
                         </Link>
                         <Link href="https://linkedin.com/in/chaitanyasw/" target="_blank" rel="noreferrer">
                             <Linkedin className="h-5 w-5" />
