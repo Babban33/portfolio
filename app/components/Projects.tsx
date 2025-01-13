@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardContent, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import {motion} from 'framer-motion';
@@ -6,6 +8,7 @@ import { siGithub } from 'simple-icons';
 import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
+import { useTheme } from 'next-themes';
 
 const projects = [
     {
@@ -35,6 +38,7 @@ const projects = [
 ]
 
 export default function Project(){
+    const {theme} = useTheme();
     return (
         <motion.section 
             initial={{ opacity: 0 }}
@@ -60,7 +64,7 @@ export default function Project(){
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: index * 0.2 }}
                         >
-                        <Card className="flex flex-col overflow-hidden h-full group">
+                        <Card className={`flex flex-col overflow-hidden h-full group hover:shadow-lg ${theme === 'dark' ? 'hover:shadow-primary/25' : 'hover:shadow-primary/50'}`}>
                             <CardHeader className="p-0">
                             <div className="relative overflow-hidden">
                                 <Image
