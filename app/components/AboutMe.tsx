@@ -1,9 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BookOpen, Code, Github, Linkedin, Mail, MessageSquare, Phone } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
 import {motion} from "framer-motion";
 import WhatsAppIcon from "@/components/icons/whatsapp-icon";
+import { siCodingninjas, siLeetcode } from "simple-icons";
 
 export default function AboutMe() {
     return(
@@ -60,13 +60,20 @@ export default function AboutMe() {
                                 <CardContent>
                                 <ul className="space-y-2">
                                     {[
-                                        { name: "LeetCode", url: "https://leetcode.com/u/ChaitanyaWankhede/", logo: "https://assets.leetcode.com/static_assets/public/images/LeetCode_logo_rvs.png" },
-                                        { name: "Coding Ninjas", url: "https://www.naukri.com/code360/profile/53ed3b23-6983-4405-a897-fc0c1249eccb", logo: "https://files.codingninjas.in/cn-logo-dark-9824.svg" }
+                                        {name: "LeetCode", url: "https://leetcode.com/u/ChaitanyaWankhede/", logo: siLeetcode},
+                                        {name: "Coding Ninjas", url: "https://www.naukri.com/code360/profile/53ed3b23-6983-4405-a897-fc0c1249eccb", logo: siCodingninjas}
                                     ].map((profile) => (
                                         <li key={profile.name}>
                                             <Link href={profile.url} target="_blank" rel="noreferrer" className="text-foreground hover:underline flex items-center">
-                                            <Image src={profile.logo} alt={profile.name} width={24} height={24} className="w-6 h-6 mr-2" />
-                                            {profile.name} Profile
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24"
+                                                className="w-6 h-6 mr-2"
+                                                fill="currentColor"
+                                            >
+                                                <path d={profile.logo.path}/>
+                                            </svg>
+                                                {profile.name} Profile
                                             </Link>
                                         </li>
                                     ))}
