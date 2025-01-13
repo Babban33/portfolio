@@ -90,16 +90,16 @@ export default function AboutMe() {
                                     <Link href="" target="_blank" rel="noopener noreferrer">
                                         <WhatsAppIcon className="w-8 h-8 text-foreground hover:text-primary transition-colors" />
                                     </Link>
-                                    <Link href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+                                    <Link href="https://linkedin.com/in/chaitanyasw" target="_blank" rel="noopener noreferrer">
                                         <Linkedin className="w-8 h-8 text-foreground hover:text-primary transition-colors" />
                                     </Link>
-                                    <Link href="mailto:your.email@example.com">
+                                    <Link href="mailto:chaitanyawankhede705@gmail.com">
                                         <Mail className="w-8 h-8 text-foreground hover:text-primary transition-colors" />
                                     </Link>
-                                    <Link href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
+                                    <Link href="https://wa.me/919359546005" target="_blank" rel="noopener noreferrer">
                                         <Phone className="w-8 h-8 text-foreground hover:text-primary transition-colors" />
                                     </Link>
-                                    <Link href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+                                    <Link href="https://github.com/Babban33" target="_blank" rel="noopener noreferrer">
                                         <Github className="w-8 h-8 text-foreground hover:text-primary transition-colors" />
                                     </Link>
                                 </div>
