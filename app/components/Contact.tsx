@@ -29,7 +29,7 @@ export default function ContactSection() {
             id="contact" 
             className="py-20 sm:py-32 bg-muted/50"
         >
-            <div className="container">
+            <div className="container max-w-screen-xl mx-auto">
                 <motion.h2 
                     className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center"
                     initial={{ opacity: 0, y: -20 }}
