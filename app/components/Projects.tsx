@@ -1,7 +1,8 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardContent, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import {motion} from 'framer-motion';
-import { Github, ExternalLink } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
+import { siGithub } from 'simple-icons';
 import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
@@ -90,7 +91,15 @@ export default function Project(){
                             <CardFooter className="flex justify-between border-t pt-4">
                             <Button asChild variant="ghost" size="sm" className="rounded-full">
                                 <Link href={project.githubLink} target="_blank" rel="noopener noreferrer">
-                                <Github className="mr-2 h-4 w-4" />
+                                {/* <Github className="mr-2 h-4 w-4" /> */}
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    className="mr-2 h-4 w-4"
+                                    fill='currentColor'
+                                >
+                                    <path d={siGithub.path} />
+                                </svg>
                                 GitHub
                                 </Link>
                             </Button>
